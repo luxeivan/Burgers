@@ -1,0 +1,194 @@
+@import './fonts.css';
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+.page-pagination{
+    height: 100px;
+    width: 20px;
+    top: 90px;
+    right: 20px;
+    position: fixed;
+}
+.page-pagination__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.page-pagination__link{
+    position: relative;
+    display: block;
+    border: 1px solid ;
+    border-color: transparent;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin: 10px 0;
+}
+.page-pagination__link_active{
+    border-color: #fff;
+}
+.page-pagination__link-dot{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+/* .page-pagination__link::before {
+    content: "";
+    text-decoration: none;
+    vertical-align: middle;
+    color: transparent;
+    line-height: 18px;
+    font-size: 34px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    border-width: 1px;
+    border-color: #d6d6d6;
+    border-style: solid;
+    border-radius: 50%;
+    background-image: -moz-linear-gradient( 90deg, rgb(237,237,237) 0%, rgb(255,255,255) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(237,237,237) 0%, rgb(255,255,255) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(237,237,237) 0%, rgb(255,255,255) 100%);
+    width: 18px;
+    height: 18px;
+} */
+/* ________________________ */
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.page1{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 1100px;
+    min-height: 650px;
+    background: url('../img/bg1.jpg') no-repeat; 
+    background-size: cover
+}
+.header{
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 93px;
+    height: 69px;
+    background: url('../img/logo.png');
+}
+.main-menu{
+    font-family: 'Conv_Ubuntu-Medium';
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}.main-menu__item{
+    display: inline-block;
+}
+.main-menu__item:after{
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+ .main-menu__item:last-child:after{
+    content: "";
+    width: 0;
+    height: 0;
+} 
+.main-menu__link{
+    text-decoration: none;
+    color: #fff;
+}
+.button-order{
+    width: 97px;
+    height: 35px;
+    background: #e45028;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+.p1-contant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.p1-contant__right-area{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.p1-contant__left-area{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.we-do{
+    font-family: 'Conv_Gagalin-Regular';
+    font-size: 75px;
+    color: #f9b43b;
+}
+.natural-burger{
+    font-family: 'Conv_Lifehack Medium';
+    font-size: 65px; 
+    color: #fff;
+}
+.button-next-page{
+    text-align: center;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+
+.page2{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 1100px;
+    min-height: 650px;
+    background: url('../img/bg2.jpg') no-repeat; 
+    background-size: cover
+}
+
+
+
+.page3{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+    background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+    min-width: 1100px;
+    min-height: 650px;
+  }
+  
