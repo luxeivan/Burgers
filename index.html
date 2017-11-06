@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/main.css">
     <title>Burgers</title>
 </head>
 
@@ -14,64 +15,134 @@
     <div class="page-pagination">
         <ul class="page-pagination__list">
             <li class="page-pagination__item">
-                <a class="page-pagination__link page-pagination__link_active" href="#"><div class="page-pagination__link-dot"></div> </a>
+                <a class="page-pagination__link page-pagination__link_active" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
             </li>
             <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#"><div class="page-pagination__link-dot"></div></a>
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
             </li>
             <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#"><div class="page-pagination__link-dot"></div></a>
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
             </li>
             <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#"><div class="page-pagination__link-dot"></div></a>
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
             </li>
             <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#"><div class="page-pagination__link-dot"></div></a>
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
             </li>
             <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#"><div class="page-pagination__link-dot"></div></a>
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
             </li>
             <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#"><div class="page-pagination__link-dot"></div></a>
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
             </li>
             <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#"><div class="page-pagination__link-dot"></div></a>
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
             </li>
         </ul>
     </div>
 
     <div class="wrapper">
-        <div class="page1">
-            <header class="header">
-                <div class="logo"></div>
-                <ul class="main-menu">
-                    <li class="main-menu__item"><a class='main-menu__link' href="#">о нас</a></li>
-                    <li class="main-menu__item"><a class='main-menu__link' href="#">бургеры</a></li>
-                    <li class="main-menu__item"><a class='main-menu__link' href="#">команда</a></li>
-                    <li class="main-menu__item"><a class='main-menu__link' href="#">меню</a></li>
-                    <li class="main-menu__item"><a class='main-menu__link' href="#">отзывы</a></li>
-                    <li class="main-menu__item"><a class='main-menu__link' href="#">контакты</a></li>
-                </ul>
-                <div class="button-order">заказать</div>
-            </header>
+        <div class="maincontent">
+            <section class="section hero">
+                <div class="container hero__container">
+                    <header class="header">
+                        <div class="header__logo">
+                            <a class="logo" href="#">
+                                <img class="logo__img" src="./img/hero/logo.svg" alt=""> </a>
+                        </div>
+                        <nav class="nav">
+                            <ul class="nav__list">
+                                <li class="nav__item">
+                                    <a class='nav__link' href="#">о нас</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class='nav__link' href="#">бургеры</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class='nav__link' href="#">команда</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class='nav__link' href="#">меню</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class='nav__link' href="#">отзывы</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class='nav__link' href="#">контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header-button">
+                            <a class="order-link" href="#">заказать</a>
+                        </div>
+                    </header>
 
-            <div class="p1-contant">
-                <div class="p1-contant__left-area">
-                    <img src="./img/burger.png" alt="Бургер">
+                    <div class="hero__content">
+                        <div class="hero__img">
+                            <img src="./img/hero/burger.png" alt="Бургер">
+                        </div>
+                        <div class="hero__description">
+                            <h2 class="section__title">Мы делаем</h2>
+                            <div class="natural-burger">Натуральные бургеры</div>
+                        </div>
+                    </div>
+                    <div class="next-page-area">
+                        <a class="button-next-page" href="#"></a>
+                    </div>
                 </div>
-                <div class="p1-contant__right-area">
-                    <div class="we-do">Мы делаем</div>
-                    <div class="natural-burger">Натуральные бургеры</div>
+            </section>
+
+            <section class="section best">
+                <div class="container best__container">
+                    <h2 class="section__title section__title--best">Мы лучшие</h2>
+                    <ul class="best__list">
+                        <li class="best__item">
+                            <div class="best__image-area">
+                                <!-- <img class="best__image" src="./img/best/meat.svg" alt="Мясо">  -->
+                                <svg class="meat">
+                                    <use xlink:href="./img/sprite1.svg#meat" />
+                                </svg>
+                            </div>
+                            <h3 class="best__title">100% свежее мясо</h3>
+                            <div class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</div>
+                        </li>
+                        <li class="best__item">
+                            <div class="best__image-area">
+                                <img class="best__image" src="./img/best/hand.svg" alt="Ручная сборка"> 
+                            </div>
+                            <h3 class="best__title">Ручная сборка</h3>
+                            <div class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</div>
+                        </li>
+                        <li class="best__item">
+                            <div class="best__image-area">
+                                <img class="best__image" src="./img/best/natural.svg" alt="Натуральные ингредиенты">
+                            </div>
+                            <h3 class="best__title">Натуральные ингредиенты</h3>
+                            <div class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="next-page-area"><a class="button-next-page" href="#"></a></div>
+            </section>
+            <section class="psection burgerList">
+                <div class="container"></div>
+            </section>
         </div>
-    </div>
-    <div class="page2">
-
-    </div>
-    <div class="page3">
-            
     </div>
     <footer class="footer"></footer>
 </body>
