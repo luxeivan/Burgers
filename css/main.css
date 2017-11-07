@@ -331,7 +331,7 @@ ul {
 .meat {
   color: red; }
 
-.burgerList {
+.slide-burger {
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -351,5 +351,11 @@ ul {
   background-image: -ms-linear-gradient(90deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
   min-width: 1100px;
   min-height: 650px; }
+
+.akk-burgers__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 /*# sourceMappingURL=main.css.map */
