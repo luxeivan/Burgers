@@ -1,41 +1,50 @@
 .best{
     background-image: url('../img/best/bg2.jpg');
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center top;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    min-height: 100vh;
+    &__container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__list{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    &__item{
+        width: 300px;
+        height: 260px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+    &__image-area{
+        width: 140px;
+        height: 100px;
+    }
+    &__title{
+        font-family: 'Lifehack-Medium',Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        text-align: center;
+    }
+    &__description{
+        font-family: 'Ubuntu-Light',Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
 }
 .section__title--best{
     color: $dark;
     margin-bottom: 90px;
-}
-.best__list{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-}
-.best__item{
-    width: 300px;
-    height: 260px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-right: 20px;
-}
-.best__image-area{
-    width: 140px;
-    height: 100px;
-}
-.best__title{
-    font-family: 'Lifehack-Medium',Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    text-align: center;
-}
-.best__description{
-    font-family: 'Ubuntu-Light',Arial, Helvetica, sans-serif;
-    font-size: 14px;
 }
 .meat{
     color: red;

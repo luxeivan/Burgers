@@ -1,0 +1,72 @@
+.team{
+    background-image: url('../img/team/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+
+    &__left{
+      width: 50%;
+      height: 100%;
+    }
+    &__right{
+      width: 50%;
+      height: 100%;
+      background-color: $dark;
+      opacity: 0.93;
+    }
+    &__container{
+      margin: 0 auto;
+      width: 380px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    &__list{
+      color: #fff;
+    }
+    &__item{
+      margin-bottom: 35px;
+    }
+    &__item-ico{
+      display: inline-block;
+      fill: $yellow;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    &__item-ico--active{
+      transform: rotate(180deg);
+    }
+    &__item-name{
+      display: inline-block;
+      font-family: 'Gagalin-Regular';
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    &__item-area{
+      display: none;
+    }
+    &__item-area--active{
+      display: flex;
+    }
+    &__item-img{
+      margin: 20px;
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+    }
+    &__item-post{
+      font-family: 'Ubuntu-B';
+    }
+    &__item-description{
+      font-family: 'Ubuntu-Light';
+    }
+  }
+  .section__title--team{
+    margin-bottom: 85px;
+  }

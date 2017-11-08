@@ -1,14 +1,82 @@
 .slide-burger{
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     background-image: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
     background-image: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
     background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
     min-width: 1100px;
-    min-height: 650px;
+    min-height: 100vh;
 }
-.akk-burgers__item{
+.slide-burger__container{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
+.akk-burgers{
+    margin: 0 30px;
+    &__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    &__img-area{
+        width: 460px;
+        margin-right: 20px;
+    }
+    &__description{
+        font-family: 'Ubuntu-Light', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #fff;
+    }
+    &__order{
+        display: inline-block;
+    }
+    &__order-area{
+        width: 460px;
+    }
+    &__price{
+        display: inline-block;
+        color: $orange;
+        font-family: 'Gagalin-Regular', Arial, Helvetica, sans-serif;;
+        font-size: 72px;
+        line-height: 1.42;
+        font-weight: 400;
+        margin-right: 20px;
+    }
+    &__price-text-small{
+        font-size: 30px;  
+    }
+}
+.section__title--slide-burger{
+    color: #fff;
+    line-height: 64px;
+    margin-bottom: 20px;
+}
+.slide-burger{
+    &__left{
+        text-align: center;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(135deg);
+    }
+    &__right{
+        text-align: center;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(-45deg);
+    }
+    &__nav{
+        margin: 0 auto;
+    }
+}
+
