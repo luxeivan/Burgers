@@ -61,22 +61,24 @@
 // console.log(proverkaHtml(stroka));
 // ___________________________________________________________________
 //ЗАДАЧА4
-var massiv = [3, 13, 74, 14, 66, 15, 22, 4],
-newMassiv = [];
+// var massiv = [3, 13, 74, 14, 66, 15, 22, 4],
+// newMassiv = [];
 
-function check(chislo){
-  var ostatok = chislo%2
-  if (ostatok !== 1) {
-    return true;
-  }else{
-    return false;
-  }
-}
+// function check(chislo){
+//   var ostatok = chislo%2
+//   if (ostatok !== 1) {
+//     return true;
+//   }else{
+//     return false;
+//   }
+// }
 
-for (var i = 0; i < massiv.length; i++) {
-  var element = massiv[i];
-  if(check(element)){
-    newMassiv.push(element);
-  }
-}
-console.log(newMassiv);
+// for (var i = 0; i < massiv.length; i++) {
+//   var element = massiv[i];
+//   if(check(element)){
+//     newMassiv.push(element);
+//   }
+// }
+// console.log(newMassiv);
+
+console.log(0.1+0.2);
