@@ -19,22 +19,45 @@
   </div>
   <script>
     var number = document.querySelector('#number'),
-      color = document.querySelector('#color'),
-      elem = document.querySelector('.block');
-    number.addEventListener('change', function(){addSqv()} ) ;
-    color.addEventListener('change', function(){addSqv()} ) ;
+        color = document.querySelector('#color'),
+        elem = document.querySelector('.block'),
+        yes = true, chet = 0;
+    number.addEventListener('change', function () {
+      addSqv()
+    });
+    color.addEventListener('change', function () {
+      addSqv()
+    });
 
     function addSqv() {
       while (elem.firstChild) {
         elem.removeChild(elem.firstChild);
       }
+
       for (var i = 0; i < number.value; i++) {
         var newdiv = document.createElement('div');
         newdiv.className = 'newdiv';
-        newdiv.style.backgroundColor = color.value;
+
+        if (yes) {
+          newdiv.style.backgroundColor = color.value;
+          newdiv.style.color = '#fff';
+          yes = false;
+        } else {
+          yes = true;
+        }
+
         newdiv.innerText = i + 1;
         elem.appendChild(newdiv);
       }
+
+      if (chet % 2 == 0) {
+        yes = false;
+      }else{
+        yes=true;
+      }
+      console.log(chet+'   '+yes);
+      chet += 1;
+      
     }
   </script>
 </body>

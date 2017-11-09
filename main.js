@@ -65,12 +65,7 @@
 // newMassiv = [];
 
 // function check(chislo){
-//   var ostatok = chislo%2
-//   if (ostatok !== 1) {
-//     return true;
-//   }else{
-//     return false;
-//   }
+//  return chislo%2 == 0
 // }
 
 // for (var i = 0; i < massiv.length; i++) {
