@@ -13,7 +13,7 @@
     overflow: hidden;
     position: relative;
     &:hover .people__description{
-      display: flex;
+      opacity: 1;
     }
   }
   &__img{
@@ -32,9 +32,11 @@
     left: 50%;
     transform: translate(-50%,-50%);
     color: #fff;
-    display: none;
+    display: flex;
+    opacity: 0;
     flex-direction: column;
     justify-content: center;
+    transition: .2s;
   }
   &__gray{
     position: absolute;
