@@ -80,5 +80,3 @@
 //   }
 // }
 // console.log(newMassiv);
-
-console.log(0.1+0.2);

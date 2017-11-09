@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="testjs.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="controls">
+    <input type="number" name="" id="number" value="3">
+    <input type="color" id="color">
+  </div>
+  <div class="block">
+
+  </div>
+  <script>
+    var number = document.querySelector('#number'),
+      color = document.querySelector('#color'),
+      elem = document.querySelector('.block');
+    number.addEventListener('change', function(){addSqv()} ) ;
+    color.addEventListener('change', function(){addSqv()} ) ;
+
+    function addSqv() {
+      while (elem.firstChild) {
+        elem.removeChild(elem.firstChild);
+      }
+      for (var i = 0; i < number.value; i++) {
+        var newdiv = document.createElement('div');
+        newdiv.className = 'newdiv';
+        newdiv.style.backgroundColor = color.value;
+        newdiv.innerText = i + 1;
+        elem.appendChild(newdiv);
+      }
+    }
+  </script>
+</body>
+
+</html>
