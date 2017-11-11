@@ -22,12 +22,8 @@
         color = document.querySelector('#color'),
         elem = document.querySelector('.block'),
         yes = true, chet = 0;
-    number.addEventListener('change', function () {
-      addSqv()
-    });
-    color.addEventListener('change', function () {
-      addSqv()
-    });
+    number.addEventListener('input', addSqv);
+    color.addEventListener('change', addSqv);
 
     function addSqv() {
       while (elem.firstChild) {
@@ -50,12 +46,8 @@
         elem.appendChild(newdiv);
       }
 
-      if (chet % 2 == 0) {
-        yes = false;
-      }else{
-        yes=true;
-      }
-      console.log(chet+'   '+yes);
+      chet % 2 == 0 ? yes = false:yes=true;
+      
       chet += 1;
       
     }
