@@ -18,6 +18,47 @@
 }
 .akk-burgers{
     margin: 0 30px;
+    &__sostav{
+        width: 60px;
+        height: 60px;
+        background: $orange;
+        border-radius: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Gagalin-Regular';
+        font-size: 14px;
+        transform: translate(0%,-100%);
+        &-img{
+            fill: #fff;
+        }
+    }
+    &__kkal{
+        width: 60px;
+        position: absolute;
+        text-align: center;
+        font-family: 'Gagalin-Regular';
+        color: #fff;
+        font-size: 20px;
+        opacity: .5;
+        transform: translate(0%,-50%);
+        &-img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            fill: #fff;
+            transform: translate(-50%,-50%);
+        }
+        &-text{
+            margin-top: 55px;
+            line-height: 35px;
+        }
+    }
     &__item{
     display: flex;
     justify-content: center;
@@ -26,6 +67,7 @@
     &__img-area{
         width: 460px;
         margin-right: 20px;
+        position: relative;
     }
     &__description{
         font-family: 'Ubuntu-Light', Arial, Helvetica, sans-serif;

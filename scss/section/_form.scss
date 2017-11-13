@@ -1,0 +1,124 @@
+.form-section{
+    background: url('../img/form/bg.jpg') center center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center
+    &__container{
+        height: 100px;
+    }
+    &__title{
+        margin-bottom: 80px;
+}
+}
+
+.form{
+    
+    display: flex;
+    color: #fff;
+    &__col{
+        flex: 1;
+        margin-right: 20px;
+    }
+    &__row{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    &__block{
+        margin-right: 10px;
+        width: 100%;
+    }
+    &__input{
+        width: 100%;
+        height: 36px;
+        border: 0;
+        border-radius: 5px;
+        &--textarea{
+            height: 109px;
+        }
+    }
+    &__lable{
+        margin-bottom: 10px;
+        font-family: 'Ubuntu-Light',Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    &__radio{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+    &__radio-elem{
+        display: none;
+    }
+    &__radio-elem:checked + .form__radio-fake:after {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+    &__radio-fake{
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: #fff;
+        position: relative;
+        &:after{
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            background: #e35028;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            transition: width .3s, height .3s;
+        }
+    }
+    &__radio-title{
+        margin: 0 5px;
+        font-family: 'Ubuntu-Light',Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    &__checkbox{
+        display: flex;
+        align-items: center;
+        &-title{
+            margin: 0 5px;
+            font-family: 'Ubuntu-Light',Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+        
+        &-fake{
+            width: 1rem;
+            height: 1rem;
+            background: #fff;
+            position: relative;
+        }
+        &-elem{
+            display: none;
+        }
+        &-elem:checked + .form__checkbox-fake:after {
+            content: "";
+            background: url('../img/form/galka.png') 50% no-repeat;
+            background-size: contain;
+            width: 11px;
+            height: 9px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
+    &__button{
+        min-width: rem(98px);
+        padding: 10px 17px;
+        border-radius: 5px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.42;
+        text-transform: uppercase;
+        transition: .5s;
+    }
+}

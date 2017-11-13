@@ -14,43 +14,57 @@
     height: 100%;
   }
   &__item{
-    width: 80px;
     height: 100%;
-    position: relative;
+    display: flex;
+  }
+  &__item-active .menu__description-area{
+    width: 540px;
+  }
+  &__item-active .menu__title .menu__title-text{
+    color: $yellow;
+  }
+  &__description{
+    height: 100%;
+    width: 560px;
+    color: #fff;
+  }
+  &__title{
+    width: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    &-description{
-      width: 560px;
+    height: 100%;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    position: relative;
+    
+    &-text{
+      transform: rotate(-90deg);
+      white-space: nowrap;
+      font-family: 'Gagalin-Regular';
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 40px;
       color: #fff;
     }
   }
-  &__gray-area{
-    position: absolute;
-    background-color: $dark;
-    opacity: .5;
-    width: 100%;
+  &__description-area{
+    background: rgba(47, 50, 52, .93);
+    width: 0px;
     height: 100%;
-    z-index: 2;
+    
+    overflow: hidden;
+    
   }
-  &__meat{
-    background: url('../img/menu/formeet.jpg') center center no-repeat;
-    background-size: cover;
-  }
-  &__title{
+  &__description-text{
+    padding: 63px 36px;
     color: #fff;
-    transform: rotate(-90deg);
-    font-size: 40px;
-    white-space: nowrap;
-    padding: 0;
-    cursor: pointer;
-    z-index: 10;
-  }
-  &__description{
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    z-index: 10;
+    font-family: 'Ubuntu-Light',Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
   }
 }
 .section__title--menu{
