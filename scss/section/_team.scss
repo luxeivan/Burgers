@@ -6,7 +6,8 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 100vh;position: relative;
+    min-height: 100vh;
+    position: relative;
     &__container{
       position: absolute;
       left: 50%;
@@ -21,9 +22,11 @@
     }
     &__list{
       color: #fff;
+      width: 100%;
     }
     &__item{
-      margin-bottom: 35px;
+      margin-bottom: rem(35px);
+      width: 100%;
     }
     &__item--active{
       .team__item-ico{
@@ -34,12 +37,14 @@
       }
       .team__item-area{
         display: flex;
+        width: 100%;
+        overflow: hidden;
       }
     }
     &__item-ico{
       display: inline-block;
       fill: $yellow;
-      margin-right: 5px;
+      margin-right: rem(5px);
       cursor: pointer;
     }
     // &__item-ico--active{
@@ -48,8 +53,8 @@
     &__item-name{
       display: inline-block;
       font-family: 'Gagalin-Regular';
-      font-size: 14px;
-      letter-spacing: 1px;
+      font-size: rem(14px);
+      letter-spacing: rem(1px);
     }
     &__link{
       color: #fff;
@@ -60,9 +65,10 @@
     }
     
     &__item-img{
-      margin: 20px;
-      width: 105px;
-      height: 105px;
+      margin: 0 auto;
+      padding: rem(20px);
+      width: rem(125px);
+      height: rem(125px);
       border-radius: 50%;
     }
     &__item-post{
@@ -74,5 +80,5 @@
   }
   .section__title--team{
     padding: 0;
-    margin-bottom: 85px;
+    margin-bottom: rem(85px);
   }

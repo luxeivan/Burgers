@@ -5,15 +5,44 @@
     background-size: cover;
     position: relative;
     min-height: 100vh;
+    &__container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__content{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex-grow: 1;
+        align-items: center;
+        padding-bottom: 15%;
+    }
+    
+    &__img{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+    &__description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 .header{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
+    padding-top: rem(10px);
+    box-sizing: border-box;
 }
 .header__logo{
+    z-index: 10;
     margin-right: auto;
 }
 .nav{
@@ -31,8 +60,8 @@
         display: inline-block;
         vertical-align: middle;
         content: ' ';
-        @include circle(5px, #fff);
-        margin: 0 12px;
+        @include circle(rem(5px), #fff);
+        margin: 0 rem(12px);
     }
     &:last-child:after{
         display: none;
@@ -41,7 +70,7 @@
 .nav__link{
     text-transform: uppercase;
     color: #fff;
-    font-size: 13px;
+    font-size: rem(13px);
     font-weight: 500;
     line-height: 1.42;
     text-decoration: none;
@@ -52,40 +81,111 @@
         text-decoration: underline;
     }
 }
-.hero__container{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.hamburger{
+    display: none;
+    width: 24px;
+    height: 5px;
+    border-radius: 3px;
+    background: #fff;
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
+    z-index: 9;
+    &__area{
+        position: absolute;
+        top:-10px;
+        width: 100%;
+        height: 500%;
+        cursor: pointer;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top:-10px;
+        width: 24px;
+        height: 5px;
+        border-radius: 3px;
+        background: #fff;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        bottom:-10px;
+        width: 24px;
+        height: 5px;
+        border-radius: 3px;
+        background: #fff;
+    }
+    &__menu{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba($dark, .93);
+        z-index: 7;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &--active{
+            display: flex;
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        .nav__link{
+            font-size: 24px;
+        }    
+        &::after{
+            margin-top: 10px;
+        }
+    }
+    &__nav{
+        display: block;
+        z-index: 7;
+        
+    }
+    &:hover{
+        background: transparent;
+        transition: .3s ease;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 24px;
+            height: 5px;
+            border-radius: 3px;
+            background: #fff;
+            transform: rotate(45deg);
+            color: #fff;
+            transition: .3s ease;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 24px;
+            height: 5px;
+            border-radius: 3px;
+            background: #fff;
+            transform: rotate(-45deg);
+            color: #fff;
+            transition: .3s ease;
+        }
+    }
 }
-.hero__content{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    align-items: center;
-    padding-bottom: 15%;
-}
-.hero__img, .hero__description{
-    flex-basis: 50%;
-    display: flex;
-}
-.hero__description{
-    flex-direction: column;
-    justify-content: center;
-}
-.section__title{
-    color: #f9b43b;
-    font-family: 'Gagalin-Regular',Arial, Helvetica, sans-serif;;
-    font-size: 72px;
-    font-weight: 400;
-    line-height: 1.42;
-    margin: 0;
-    padding-top: 60px;
-}
+
+
 .natural-burger{
     font-family: 'Lifehack-Medium',Arial, Helvetica, sans-serif;;
-    font-size: 65px; 
+    font-size: rem(65px); 
     color: #fff;
 }

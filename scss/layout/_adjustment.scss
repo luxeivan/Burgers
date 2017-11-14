@@ -6,34 +6,37 @@
 }
 
 .maincontent {
+    width: 100%;
     height: 100%;
-    min-height: 650px;
+    min-height: rem(650px);
 }
 
 .container {
-    width: 940px;
+    width: rem(940px);
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .section {
     height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.31);
-    min-width: 940px;
-    min-height: 650px;
+    min-width: rem(768px);
+    min-height: rem(650px);
 }
 
 .order-link {
     min-width: rem(98px);
-    padding: 10px 17px;
-    border-radius: 5px;
+    padding: rem(10px) rem(17px);
+    border-radius: rem(5px);
     background-color: $orange;
     color: #fff;
     text-decoration: none;
-    font-size: 13px;
+    font-size: rem(13px);
     font-weight: 500;
     line-height: 1.42;
     text-transform: uppercase;
@@ -45,10 +48,10 @@
 
 .page-pagination {
     z-index: 10;
-    height: 100px;
-    width: 20px;
-    top: 90px;
-    right: 20px;
+    height: rem(100px);
+    width: rem(20px);
+    top: rem(90px);
+    right: rem(20px);
     position: fixed;
     &__list {
         list-style: none;
@@ -58,12 +61,12 @@
     &__link {
         position: relative;
         display: block;
-        border: 1px solid;
+        border: rem(1px) solid;
         border-color: transparent;
         border-radius: 50%;
-        width: 16px;
-        height: 16px;
-        margin: 10px 0;
+        width: rem(16px);
+        height: rem(16px);
+        margin: rem(10px) 0;
     }
     &__link_active {
         border-color: #fff;
@@ -72,10 +75,20 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 5px;
-        height: 5px;
+        width: rem(5px);
+        height: rem(5px);
         background: #fff;
         border-radius: 50%;
         transform: translate(-50%, -50%);
     }
 }
+.section__title{
+    color: #f9b43b;
+    font-family: 'Gagalin-Regular',Arial, Helvetica, sans-serif;;
+    font-size: rem(72px);
+    font-weight: 400;
+    line-height: 1.42;
+    margin: 0;
+    padding-top: rem(60px);
+}
+

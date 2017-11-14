@@ -1,0 +1,113 @@
+@media screen and (max-width:980px) {
+  html{
+    font-size: 15px;
+  }
+  .container{
+    width: 95%;
+  }
+}
+@media screen and (max-width:768px) {
+  html{
+    font-size: 14px;
+  }
+  .hamburger{
+    display: block;
+  }
+  .nav{
+    display: none;
+  }
+  .section{
+    min-width: 480px;
+  }
+  // _________________________
+  .hero{
+    &__content{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    }
+    &__description{
+      text-align: center;
+    }
+  }
+  // _________________________
+  .team{
+  &__container{
+    padding: 5% 20% 0 20%;
+    left: 0;
+    width: 100%;
+    align-items: center;
+  }
+    &__item{
+      text-align: center;
+    }
+    &__item-area{
+      flex-direction: column;
+    }
+  }
+// _________________________
+  .people{
+    &__item{
+      width: 50%;
+      height: 25%;
+    }
+  }
+  // _________________________
+  .form{
+    flex-direction: column;
+    &__col{
+      margin-right: 0;
+    }
+    &-section__title{
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width:480px) {
+  html{
+    font-size: 13px;
+  }
+  .section{
+    min-width: 320px;
+  }
+  .best{
+    &__list{
+      flex-direction: column;
+    }
+    &__item{
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &__image-area{
+      margin-right: 10px;
+    }
+    &__title{
+      margin-top: 0;
+    }
+  }
+
+  .footer{
+    flex-direction: column;
+    height: rem(88px);
+    &__text{
+      text-align: center;
+    }
+  }
+}
+
+.hidden{
+  display: none;
+}
+@media screen and (max-width:405px) {
+  .hero{
+    &__h2{
+      text-align: center;
+      font-size: 3rem;
+    }
+    .natural-burger{
+      font-size: 3rem;
+    }
+  }
+}

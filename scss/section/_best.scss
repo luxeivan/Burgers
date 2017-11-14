@@ -17,16 +17,18 @@
         flex-direction: row;
     }
     &__item{
-        width: 300px;
-        height: 260px;
+        width: 33%;
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin-right: 20px;
+        margin-right: rem(20px);
+        &:last-child{
+            margin-right:0;
+        }
     }
     &__image-area{
-        width: 140px;
-        height: 100px;
+        width: rem(140px);
+        height: rem(100px);
     }
     &__meat{
         fill: $orange;
@@ -39,17 +41,17 @@
     }
     &__title{
         font-family: 'Lifehack-Medium',Arial, Helvetica, sans-serif;
-        font-size: 24px;
+        font-size: rem(24px);
         text-align: center;
     }
     &__description{
         font-family: 'Ubuntu-Light',Arial, Helvetica, sans-serif;
-        font-size: 14px;
+        font-size: rem(14px);
     }
 }
 .section__title--best{
     color: $dark;
-    margin-bottom: 90px;
+    margin-bottom: rem(90px);
 }
 .meat{
     color: red;
