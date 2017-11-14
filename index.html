@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    
     <title>Burgers</title>
 </head>
 
@@ -120,8 +122,8 @@
                         <div class="header-button">
                             <a class="order-link" href="#">заказать</a>
                         </div>
-                        <div class="hamburger hamburger--active">
-                            <div class="hamburger__area"> 
+                        <div class="hamburger">
+                            <div class="hamburger__area" id="hamburger"> 
                             </div>
                         </div>
                         
@@ -142,7 +144,7 @@
                 </div>
             </section>
 
-            <section class="section best">
+            <section class="section best" id="section1">
                 <div class="container best__container">
                     <h2 class="section__title section__title--best">Мы лучшие</h2>
                     <ul class="best__list">
@@ -569,7 +571,7 @@
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

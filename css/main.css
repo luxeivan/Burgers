@@ -346,8 +346,13 @@ ul {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    opacity: 0; }
     .hamburger__menu--active {
+      opacity: 1;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -392,12 +397,12 @@ ul {
   .hamburger__nav {
     display: block;
     z-index: 7; }
-  .hamburger:hover {
+  .hamburger--active {
     background: transparent;
     -webkit-transition: .3s ease;
     -o-transition: .3s ease;
     transition: .3s ease; }
-    .hamburger:hover::before {
+    .hamburger--active::before {
       content: '';
       position: absolute;
       top: 0;
@@ -412,7 +417,7 @@ ul {
       -webkit-transition: .3s ease;
       -o-transition: .3s ease;
       transition: .3s ease; }
-    .hamburger:hover::after {
+    .hamburger--active::after {
       content: '';
       position: absolute;
       top: 0;

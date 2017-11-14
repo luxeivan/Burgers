@@ -126,7 +126,10 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        transition: .3s;
+        opacity: 0;
         &--active{
+            opacity: 1;
             display: flex;
         }
     }
@@ -153,7 +156,7 @@
         z-index: 7;
         
     }
-    &:hover{
+    &--active{
         background: transparent;
         transition: .3s ease;
         &::before{
