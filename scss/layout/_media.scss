@@ -69,6 +69,10 @@
   }
   .section{
     min-width: 320px;
+    &__title--best{
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
   }
   .best{
     &__list{
@@ -78,13 +82,26 @@
       flex-direction: row;
       justify-content: center;
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
     }
     &__image-area{
       margin-right: 10px;
     }
     &__title{
       margin-top: 0;
+      text-align: left;
+    }
+  }
+
+  .people{
+    &__description{
+      align-items: center;
+    }
+    &__name{
+      text-align: center;
+    }
+    &__text{
+      display: none;
     }
   }
 
@@ -108,6 +125,12 @@
     }
     .natural-burger{
       font-size: 3rem;
+    }
+  }
+
+  .form-section{
+    &__title{
+      font-size: 2.0rem;
     }
   }
 }

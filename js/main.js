@@ -9,3 +9,13 @@ $(window).scroll(function(){
 
   // window.location = '#section1';
 })
+
+$(window).resize(()=>{
+  let width=$(window).width();
+  let peopleButton=$('.people__button');
+  if(width<=480){
+    peopleButton.text('отзыв');
+  }else{
+    peopleButton.text('подробнее');
+  }
+});

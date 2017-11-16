@@ -58,9 +58,8 @@
     background: rgba(47, 50, 52, .93);
     width: rem(0px);
     height: 100%;
-    
+    z-index: 10;
     overflow: hidden;
-    
   }
   &__description-text{
     padding: rem(63px) rem(36px);
