@@ -3,6 +3,10 @@
     height: 100%;
     position: relative;
     min-height: 0;
+    &--open-menu{
+        height: 100vh;
+        overflow: hidden;
+    }
 }
 
 .maincontent {

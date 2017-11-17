@@ -37,9 +37,24 @@
       }
       .team__item-area{
         display: flex;
+        // height: 200px;
         width: 100%;
         overflow: hidden;
       }
+      .team__item-hide{
+        overflow: hidden;
+      }
+    }
+    &__item-hide{
+      overflow: hidden;
+      transition: height .5s;
+      height: 0;
+    }
+    &__item-area{
+      display: flex;
+      transition: height .5s;
+      // height: 0;
+      overflow: hidden;
     }
     &__item-ico{
       display: inline-block;
@@ -55,14 +70,13 @@
       font-family: 'Gagalin-Regular';
       font-size: rem(20px);
       letter-spacing: rem(1px);
+      cursor: pointer;
     }
     &__link{
       color: #fff;
       text-decoration: none;
     }
-    &__item-area{
-      display: none;
-    }
+    
     
     &__item-img{
       margin: 0 auto;

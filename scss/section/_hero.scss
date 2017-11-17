@@ -185,7 +185,16 @@
         }
     }
 }
-
+.button-next-page{
+    text-align: center;
+    display: inline-block;
+    width: rem(22px);
+    height: rem(22px);
+    border-right: rem(2px) solid #fff;
+    border-bottom: rem(2px) solid #fff;
+    transform: rotate(45deg);
+    margin-bottom: 40px;
+}
 
 .natural-burger{
     font-family: 'Lifehack-Medium',Arial, Helvetica, sans-serif;;

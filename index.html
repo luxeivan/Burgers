@@ -10,78 +10,34 @@
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/jquery-3.2.1.min.js"></script>
-    
+
     <title>Burgers</title>
 </head>
 
 <body>
-        <div class="hamburger__menu ">
-                <nav class="hamburger__nav">
-                    <ul class="nav__list hamburger__list">
-                        <li class="nav__item hamburger__item">
-                            <a class='nav__link' href="#">о нас</a>
-                        </li>
-                        <li class="nav__item hamburger__item">
-                            <a class='nav__link' href="#">бургеры</a>
-                        </li>
-                        <li class="nav__item hamburger__item">
-                            <a class='nav__link' href="#">команда</a>
-                        </li>
-                        <li class="nav__item hamburger__item">
-                            <a class='nav__link' href="#">меню</a>
-                        </li>
-                        <li class="nav__item hamburger__item">
-                            <a class='nav__link' href="#">отзывы</a>
-                        </li>
-                        <li class="nav__item hamburger__item">
-                            <a class='nav__link' href="#">контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-    <div class="page-pagination">
-        <ul class="page-pagination__list">
-            <li class="page-pagination__item">
-                <a class="page-pagination__link page-pagination__link_active" href="#">
-                    <div class="page-pagination__link-dot"></div>
-                </a>
-            </li>
-            <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                    <div class="page-pagination__link-dot"></div>
-                </a>
-            </li>
-            <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                    <div class="page-pagination__link-dot"></div>
-                </a>
-            </li>
-            <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                    <div class="page-pagination__link-dot"></div>
-                </a>
-            </li>
-            <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                    <div class="page-pagination__link-dot"></div>
-                </a>
-            </li>
-            <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                    <div class="page-pagination__link-dot"></div>
-                </a>
-            </li>
-            <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                    <div class="page-pagination__link-dot"></div>
-                </a>
-            </li>
-            <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                    <div class="page-pagination__link-dot"></div>
-                </a>
-            </li>
-        </ul>
+    <div class="hamburger__menu ">
+        <nav class="hamburger__nav">
+            <ul class="nav__list hamburger__list">
+                <li class="nav__item hamburger__item">
+                    <a class='nav__link' href="#">о нас</a>
+                </li>
+                <li class="nav__item hamburger__item">
+                    <a class='nav__link' href="#section-best">бургеры</a>
+                </li>
+                <li class="nav__item hamburger__item">
+                    <a class='nav__link' href="#">команда</a>
+                </li>
+                <li class="nav__item hamburger__item">
+                    <a class='nav__link' href="#">меню</a>
+                </li>
+                <li class="nav__item hamburger__item">
+                    <a class='nav__link' href="#">отзывы</a>
+                </li>
+                <li class="nav__item hamburger__item">
+                    <a class='nav__link' href="#">контакты</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
     <div class="wrapper">
@@ -123,10 +79,10 @@
                             <a class="order-link" href="#">заказать</a>
                         </div>
                         <div class="hamburger">
-                            <div class="hamburger__area" id="hamburger"> 
+                            <div class="hamburger__area" id="hamburger">
                             </div>
                         </div>
-                        
+
                     </header>
 
                     <div class="hero__content">
@@ -144,7 +100,7 @@
                 </div>
             </section>
 
-            <section class="section best" id="section1">
+            <section class="section best" id="section-best">
                 <div class="container best__container">
                     <h2 class="section__title section__title--best">Мы лучшие</h2>
                     <ul class="best__list">
@@ -189,11 +145,12 @@
                     </ul>
                 </div>
             </section>
-            <section class="section slide-burger hidden">
+            <section class="section slide-burger">
+            <div class="container slide-burger__container">
                 <div class="slide-burger__nav">
                     <a class="slide-burger__left" href=""></a>
                 </div>
-                <div class="container slide-burger__container">
+                
 
                     <ul class="akk-burgers">
                         <li class="akk-burgers__item">
@@ -204,7 +161,7 @@
                                     </svg>
                                     состав
                                 </div>
-                                <img src="./img/slideBurgers/blackBurger.png" alt="Черный Бургер" class="akk-burgers__img" width="460">
+                                <div class="akk-burgers__img" style="background-image: url('./img/slideBurgers/blackBurger.png')"></div>
                                 <div class="akk-burgers__kkal">
                                     <svg class="akk-burgers__kkal-img" width="60" height="62">
                                         <use xlink:href="img/sprite.svg#kkal"></use>
@@ -230,10 +187,11 @@
                         </li>
                     </ul>
 
-                </div>
+                
                 <div class="slide-burger__nav">
                     <a class="slide-burger__right" href=""></a>
                 </div>
+            </div>
             </section>
             <section class="section team">
 
@@ -245,8 +203,9 @@
                                 <path fill-rule="evenodd" d="M4.507,6.001 L0.006,0.001 L9.007,0.001 L4.507,6.001 Z" />
                             </svg>
                             <h3 class="team__item-name">
-                                <a class="team__link" href="#">даниэль рэдклив</a>
+                                <a class="team__link">даниэль рэдклив</a>
                             </h3>
+                            <div class="team__item-hide">
                             <div class="team__item-area">
                                 <img class="team__item-img" src="./img/team/rj.jpg" alt="" width="105" height="105">
                                 <div class="team__item-text">
@@ -254,29 +213,16 @@
                                     <div class="team__item-description">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="team__item team__item--active">
-                            <svg class="team__item-ico" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9px" height="6px">
-                                <path fill-rule="evenodd" d="M4.507,6.001 L0.006,0.001 L9.007,0.001 L4.507,6.001 Z" />
-                            </svg>
-                            <h3 class="team__item-name">
-                                <a class="team__link" href="#">ричард джеймс</a>
-                            </h3>
-                            <div class="team__item-area team__item-area--active">
-                                <img class="team__item-img" src="./img/team/rj.jpg" alt="" width="105" height="105">
-                                <div class="team__item-text">
-                                    <h4 class="team__item-post">Оператор</h4>
-                                    <div class="team__item-description">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
-                                </div>
-                            </div>
+                        </div>
                         </li>
                         <li class="team__item">
                             <svg class="team__item-ico" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9px" height="6px">
                                 <path fill-rule="evenodd" d="M4.507,6.001 L0.006,0.001 L9.007,0.001 L4.507,6.001 Z" />
                             </svg>
                             <h3 class="team__item-name">
-                                <a class="team__link" href="#">джек финн</a>
+                                <a class="team__link">ричард джеймс</a>
                             </h3>
+                            <div class="team__item-hide">
                             <div class="team__item-area">
                                 <img class="team__item-img" src="./img/team/rj.jpg" alt="" width="105" height="105">
                                 <div class="team__item-text">
@@ -284,14 +230,16 @@
                                     <div class="team__item-description">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
                                 </div>
                             </div>
+                        </div>
                         </li>
                         <li class="team__item">
                             <svg class="team__item-ico" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9px" height="6px">
                                 <path fill-rule="evenodd" d="M4.507,6.001 L0.006,0.001 L9.007,0.001 L4.507,6.001 Z" />
                             </svg>
                             <h3 class="team__item-name">
-                                <a class="team__link" href="#">николай иванов</a>
+                                <a class="team__link">джек финн</a>
                             </h3>
+                            <div class="team__item-hide">
                             <div class="team__item-area">
                                 <img class="team__item-img" src="./img/team/rj.jpg" alt="" width="105" height="105">
                                 <div class="team__item-text">
@@ -299,6 +247,24 @@
                                     <div class="team__item-description">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
                                 </div>
                             </div>
+                        </div>
+                        </li>
+                        <li class="team__item">
+                            <svg class="team__item-ico" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9px" height="6px">
+                                <path fill-rule="evenodd" d="M4.507,6.001 L0.006,0.001 L9.007,0.001 L4.507,6.001 Z" />
+                            </svg>
+                            <h3 class="team__item-name">
+                                <a class="team__link">николай иванов</a>
+                            </h3>
+                            <div class="team__item-hide">
+                            <div class="team__item-area">
+                                <img class="team__item-img" src="./img/team/rj.jpg" alt="" width="105" height="105">
+                                <div class="team__item-text">
+                                    <h4 class="team__item-post">Оператор</h4>
+                                    <div class="team__item-description">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+                                </div>
+                            </div>
+                        </div>
                         </li>
                     </ul>
                 </div>
@@ -307,8 +273,8 @@
                 <h2 class="section__title section__title--menu">Меню</h2>
                 <div class="menu__container">
                     <ul class="menu__list">
-                        <li class="menu__item menu__item-active">
-                            <a class="menu__title" href="#" style="background-image:url('./img/menu/formeet.jpg')">
+                        <li class="menu__item">
+                            <a class="menu__title" style="background-image:url('./img/menu/formeet.jpg')">
                                 <div class="menu__title-text">для мясоедов</div>
                             </a>
                             <div class="menu__description-area">
@@ -324,7 +290,7 @@
                             </div>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__title" href="#" style="background-image:url('./img/menu/formeet.jpg')">
+                            <a class="menu__title"  style="background-image:url('./img/menu/vegan.jpg')">
                                 <div class="menu__title-text">вегетарианское</div>
                             </a>
                             <div class="menu__description-area">
@@ -340,7 +306,7 @@
                             </div>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__title" href="#" style="background-image:url('./img/menu/formeet.jpg')">
+                            <a class="menu__title"  style="background-image:url('./img/menu/diet.jpg')">
                                 <div class="menu__title-text">диетическое</div>
                             </a>
                             <div class="menu__description-area">
@@ -570,6 +536,58 @@
             </section>
         </div>
     </div>
+
+
+
+    
+
+
+    <div class="page-pagination">
+        <ul class="page-pagination__list">
+            <li class="page-pagination__item">
+                <a class="page-pagination__link page-pagination__link_active" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
+            </li>
+            <li class="page-pagination__item">
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
+            </li>
+            <li class="page-pagination__item">
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
+            </li>
+            <li class="page-pagination__item">
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
+            </li>
+            <li class="page-pagination__item">
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
+            </li>
+            <li class="page-pagination__item">
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
+            </li>
+            <li class="page-pagination__item">
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
+            </li>
+            <li class="page-pagination__item">
+                <a class="page-pagination__link" href="#">
+                    <div class="page-pagination__link-dot"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
 
     <script src="./js/main.js"></script>
 </body>
