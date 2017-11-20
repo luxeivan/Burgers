@@ -25,6 +25,9 @@
     flex-direction: column;
     flex-wrap: nowrap;
     }
+    &__img-area{
+      width: 50%;
+    }
     &__description{
       text-align: center;
     }
@@ -100,6 +103,7 @@
   html{
     font-size: 13px;
   }
+
   .section{
     min-width: 320px;
     &__title--best{
@@ -107,6 +111,7 @@
       margin-bottom: 2rem;
     }
   }
+  
   .best{
     &__list{
       flex-direction: column;

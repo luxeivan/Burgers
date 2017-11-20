@@ -74,9 +74,16 @@ $(function(){
 $(function(){
   const maincontent = $('.maincontent');
   const sections = $('.section');
+  const pagination = $('.page-pagination__item');
   const scroll = function(sectionid){
     let position = (sectionid * -100) + '%';
     maincontent.css('transform',`translateY(${position})`)
+    sections.eq(sectionid).addClass('activeSection').siblings().removeClass('activeSection');
+    pagination.eq(sectionid).children('.page-pagination__link').addClass('page-pagination__link_active');
+    pagination.eq(sectionid).siblings().children('.page-pagination__link').removeClass('page-pagination__link_active');
+    setTimeout(function(){
+      inScroll=false;
+    } ,300);
   };
   let inScroll = false;
 
@@ -85,22 +92,24 @@ $(function(){
     let nextSection = sectionActive.next();
     let prevSection = sectionActive.prev();
     let delta = e.originalEvent.deltaY;
-    if (inScroll){
-      return
-    }else{
+    if (inScroll) return
       inScroll=true
     if (delta>0 && nextSection.length){
       scroll(nextSection.index());
-      nextSection.addClass('activeSection').siblings().removeClass('activeSection');
+      // nextSection.addClass('activeSection').siblings().removeClass('activeSection');
     }
      if(delta<0 && prevSection.length){
       scroll(prevSection.index());
-      prevSection.addClass('activeSection').siblings().removeClass('activeSection');
+      // prevSection.addClass('activeSection').siblings().removeClass('activeSection');
     }
-    setTimeout(function(){
-      inScroll=false;
-    } ,300);
-    }
+  });
 
+  
+  $('[data-scroll-in]').on('click',function(e){
+    e.preventDefault();
+    const $this = $(e.currentTarget);
+    const sectionIndex = parseInt($this.attr('data-scroll-in'));
+    
+    scroll(sectionIndex);
   });
 });
