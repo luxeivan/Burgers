@@ -1,3 +1,36 @@
+//Слайдер
+$(function(){
+  let elems = $('.akk-burgers__item')
+  let kolvo = elems.length;
+  let sdvig = 0;
+  console.log(kolvo);
+  $('.akk-burgers').css('width',kolvo*100 + '%');
+  elems.eq(0).addClass('akk-burgers__item--active');
+  let elem = $('.akk-burgers__item--active');
+
+
+  $('.slide-burger__right').on('click', function(){
+    let elem = $('.akk-burgers__item--active');
+    if(elem.next().length){
+      sdvig = sdvig - (100/kolvo);
+      $('.akk-burgers').css('transform',`translateX(${sdvig}%)`);
+      elem.next().addClass('akk-burgers__item--active').siblings().removeClass('akk-burgers__item--active');
+    }
+  });
+
+  $('.slide-burger__left').on('click', function(){
+    let elem = $('.akk-burgers__item--active');
+    if(elem.prev().length){
+      sdvig = sdvig - (-100/kolvo);
+      $('.akk-burgers').css('transform',`translateX(${sdvig}%)`);
+      elem.prev().addClass('akk-burgers__item--active').siblings().removeClass('akk-burgers__item--active');
+    }
+  });
+
+});
+
+
+//Меню
 $(function(){
   $('.hamburger,.hamburger__item').click(function(){
     $('.hamburger').toggleClass('hamburger--active');
@@ -92,13 +125,17 @@ $(function(){
     let nextSection = sectionActive.next();
     let prevSection = sectionActive.prev();
     let delta = e.originalEvent.deltaY;
-    if (inScroll) return
-      inScroll=true
+    console.log(inScroll);
+    
     if (delta>0 && nextSection.length){
+      if (inScroll) return
+      inScroll=true
       scroll(nextSection.index());
       // nextSection.addClass('activeSection').siblings().removeClass('activeSection');
     }
      if(delta<0 && prevSection.length){
+      if (inScroll) return
+      inScroll=true
       scroll(prevSection.index());
       // prevSection.addClass('activeSection').siblings().removeClass('activeSection');
     }
@@ -109,7 +146,9 @@ $(function(){
     e.preventDefault();
     const $this = $(e.currentTarget);
     const sectionIndex = parseInt($this.attr('data-scroll-in'));
-    
+    if (inScroll) return
+    inScroll=true
     scroll(sectionIndex);
   });
 });
+

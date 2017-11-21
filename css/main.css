@@ -599,7 +599,7 @@ ul {
     align-items: center;
     width: 6.25rem;
     height: 6.25rem;
-    overflow: hidden; }
+    margin: 0 5px; }
   .slide-burger__container {
     width: 95%;
     height: 80%;
@@ -615,10 +615,40 @@ ul {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
+  .slide-burger__slider {
+    height: 100%;
+    margin: 0 5px;
+    overflow: hidden; }
 
 .akk-burgers {
-  margin: 0 20px;
-  height: 100%; }
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-transition: -webkit-transform .8s;
+  transition: -webkit-transform .8s;
+  -o-transition: transform .8s;
+  transition: transform .8s;
+  transition: transform .8s, -webkit-transform .8s; }
+  .akk-burgers__item {
+    margin: 0 5px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%; }
   .akk-burgers__sostav {
     width: 5.625rem;
     height: 5.625rem;
@@ -677,20 +707,6 @@ ul {
       -ms-transform: translate(0, 1.6875rem);
       transform: translate(0, 1.6875rem);
       line-height: 2.1875rem; }
-  .akk-burgers__item {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 100%; }
   .akk-burgers__img-area {
     width: 50%;
     height: 100%;
@@ -1286,7 +1302,7 @@ ul {
     transform: translate(0, 0); }
   .akk-burgers__sostav {
     top: 0;
-    left: 0;
+    left: 5%;
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0); }
