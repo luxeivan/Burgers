@@ -58,11 +58,51 @@
     top: 0;
     left: 5%;
     transform: translate(0,0);
+    &:hover .sostav{
+      display: none;
+   }
   }
   &__description{
     text-align: center;
   }
 
+}
+.sostav {
+  width: rem(322px);
+  padding-right: rem(62px);
+  &__close{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    width: 24px;
+    height: 5px;
+    background: transparent;
+    transition: .3s ease;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 24px;
+        height: 5px;
+        border-radius: 3px;
+        background: $orange;
+        transform: rotate(45deg);
+        color: #fff;
+        transition: .3s ease;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 24px;
+        height: 5px;
+        border-radius: 3px;
+        background: $orange;
+        transform: rotate(-45deg);
+        color: #fff;
+        transition: .3s ease;
+    }
+  }
 }
 
   // _________________________

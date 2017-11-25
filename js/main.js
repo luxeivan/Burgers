@@ -3,11 +3,9 @@ $(function(){
   let elems = $('.akk-burgers__item')
   let kolvo = elems.length;
   let sdvig = 0;
-  console.log(kolvo);
   $('.akk-burgers').css('width',kolvo*100 + '%');
   elems.eq(0).addClass('akk-burgers__item--active');
   let elem = $('.akk-burgers__item--active');
-
 
   $('.slide-burger__right').on('click', function(){
     let elem = $('.akk-burgers__item--active');
@@ -32,18 +30,24 @@ $(function(){
 
 //Меню
 $(function(){
+  let flag = true;
   $('.hamburger,.hamburger__item').click(function(){
     $('.hamburger').toggleClass('hamburger--active');
     $('.hamburger__menu').toggleClass('hamburger__menu--active');
     $('.wrapper').toggleClass('wrapper--open-menu');
+    if(flag){
+      flag = false;
+      $('.page-pagination').hide()
+    }else{
+      flag = true;
+      $('.page-pagination').show();
+    }
+   
   })
 });
-// $(window).scroll(function(){
-//   $('.hamburger').removeClass('hamburger--active');
-//   $('.hamburger__menu').removeClass('hamburger__menu--active');
-// })
 
-//Текст кнопки при Изменении размера окна
+
+//Текст кнопки отзывы при Изменении размера окна
 $(function(){
   $(window).resize(()=>{
     let width=$(window).width();
@@ -125,23 +129,19 @@ $(function(){
     let nextSection = sectionActive.next();
     let prevSection = sectionActive.prev();
     let delta = e.originalEvent.deltaY;
-    console.log(inScroll);
     
     if (delta>0 && nextSection.length){
       if (inScroll) return
       inScroll=true
       scroll(nextSection.index());
-      // nextSection.addClass('activeSection').siblings().removeClass('activeSection');
     }
      if(delta<0 && prevSection.length){
       if (inScroll) return
       inScroll=true
       scroll(prevSection.index());
-      // prevSection.addClass('activeSection').siblings().removeClass('activeSection');
     }
   });
 
-  
   $('[data-scroll-in]').on('click',function(e){
     e.preventDefault();
     const $this = $(e.currentTarget);
@@ -152,3 +152,75 @@ $(function(){
   });
 });
 
+//Форма
+$(function(){
+  $('#form').on('submit',submitForm)
+
+  function submitForm(e){
+    e.preventDefault();
+    let form = $(e.target),
+    data = form.serialize(),
+    url = form.attr('action');
+    let request = $.ajax({
+      type:'POST',
+      url: url,
+      dataType:'HTML',
+      data: data
+    });
+    request.done(function(msg){
+      alert(msg);
+    })
+    request.fail(function(msg,text){
+      alert('Ошибка' + text);
+    })
+  }
+});
+
+// Состав
+$(function () {
+  let width = window.innerWidth;
+  $('.akk-burgers__sostav').on('click', function(e){
+    if (width<=768){
+      const $this = $(e.currentTarget).find('.sostav');
+      $this.toggleClass('sostav--active');
+    }
+  });
+  $('.sostav--active').on('click',function(e){
+    e.currentTarget.toggleClass('sostav--active');
+  });
+});
+
+
+
+//Карта
+$(function () {
+  ymaps.ready(init);
+  let myMap;
+
+  function init() {
+    myMap = new ymaps.Map("map", {
+      center: [59.936143, 30.315055],
+      zoom: 12
+    });
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+      myMap.controls.add('zoomControl');
+
+    let description = {
+        balloonContent: "Наша всеми любимая бургерная",
+        hintContent: "Mr.Burger"
+      },
+      options = {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map-marker.svg',
+        iconImageSize: [47, 58],
+        iconImageOffset: [-24, -58]
+      },
+      placemark1 = new ymaps.Placemark([59.977357, 30.313831], description, options);
+      placemark2 = new ymaps.Placemark([59.944690, 30.381894], description, options);
+      placemark3 = new ymaps.Placemark([59.915397, 30.493131], description, options);
+      placemark4 = new ymaps.Placemark([59.890391, 30.315633], description, options);
+      myMap.geoObjects.add(placemark1).add(placemark2).add(placemark3).add(placemark4);
+  }
+});

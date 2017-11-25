@@ -30,7 +30,10 @@
         height: rem(36px);
         border: 0;
         border-radius: rem(5px);
+        color: #000;
         &--textarea{
+            vertical-align: top;
+            color: #000;
             height: rem(109px);
         }
     }
@@ -106,7 +109,9 @@
             transform: translate(-50%, -50%);
         }
     }
-    
+    &__submit{
+        border: 0;
+    }
     &__button{
         min-width: rem(98px);
         padding: rem(10px) rem(17px);

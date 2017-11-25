@@ -1,18 +1,15 @@
-.slide-burger{
+.slide-burger {
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-image: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
-    background-image: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
-    background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+    background-image: -moz-linear-gradient( 90deg, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
+    background-image: -ms-linear-gradient( 90deg, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
     min-height: 100vh;
-    &__wrapper{
-
-    }
-    &__left{
+    &__left {
         text-align: center;
         display: inline-block;
         width: rem(22px);
@@ -21,7 +18,7 @@
         border-bottom: rem(2px) solid #fff;
         transform: rotate(135deg);
     }
-    &__right{
+    &__right {
         text-align: center;
         display: inline-block;
         width: rem(22px);
@@ -30,44 +27,42 @@
         border-bottom: rem(2px) solid #fff;
         transform: rotate(-45deg);
     }
-    &__nav{
+    &__nav {
         display: flex;
         justify-content: center;
         align-items: center;
         width: rem(100px);
         height: rem(100px);
-        margin: 0 5px;
-        // overflow: hidden;
+        margin: 0 5px; // overflow: hidden;
     }
-    &__container{
+    &__container {
         width: 95%;
-        height: 80%;
+        height: 100%;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
     }
-    &__slider{
+    &__slider {
         height: 100%;
         margin: 0 5px;
         overflow: hidden;
     }
 }
-.akk-burgers{
+
+.akk-burgers {
     // width: 200%;
-    height: 100%;
-    //transform: translateX(-50%);
+    height: 100%; //transform: translateX(-50%);
     display: flex;
     flex-wrap: nowrap;
     transition: transform .8s;
-    &__item{
+    &__item {
         margin: 0 5px;
         display: flex;
         justify-content: center;
-        align-items: center;
-        // width: 100%;
+        align-items: center; // width: 100%;
         height: 100%;
-        }
-    &__sostav{
+    }
+    &__sostav {
         width: rem(90px);
         height: rem(90px);
         background: $orange;
@@ -82,12 +77,16 @@
         align-items: center;
         font-family: 'Gagalin-Regular';
         font-size: rem(14px);
-        transform: translate(0%,-250%);
-        &-img{
+        transform: translate(0%, -250%);
+        cursor: pointer;
+        &-img {
             fill: #fff;
         }
+         &:hover .sostav{
+            display: block;
+         }
     }
-    &__kkal{
+    &__kkal {
         width: rem(60px);
         position: absolute;
         text-align: center;
@@ -96,63 +95,100 @@
         font-size: rem(20px);
         opacity: .5;
         top: 50%;
-        transform: translate(0%,200%);
-        &-img{
+        transform: translate(0%, 200%);
+        &-img {
             position: absolute;
             top: 50%;
             left: 50%;
             fill: #fff;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
         }
-        &-text{
-            transform:translate(0,rem(27px)) ;
+        &-text {
+            transform: translate(0, rem(27px));
             line-height: rem(35px);
         }
     }
-    
-    &__img-area{
+    &__img-area {
         width: 50%;
         height: 100%;
         margin-right: rem(20px);
         position: relative;
     }
-    &__img{
+    &__img {
         background-size: contain;
         background-position: 50% 50%;
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
     }
-    &__text-area{
+    &__text-area {
         width: 50%;
     }
-    &__description{
+    &__description {
         font-family: 'Ubuntu-Light', Arial, Helvetica, sans-serif;
         font-size: rem(14px);
         color: #fff;
     }
-    &__order{
+    &__order {
         display: inline-block;
     }
-    &__order-area{
+    &__order-area {
         width: rem(460px);
     }
-    &__price{
+    &__price {
         display: inline-block;
         color: $orange;
-        font-family: 'Gagalin-Regular', Arial, Helvetica, sans-serif;;
+        font-family: 'Gagalin-Regular', Arial, Helvetica, sans-serif;
+        ;
         font-size: rem(72px);
         line-height: 1.42;
         font-weight: 400;
         margin-right: rem(20px);
     }
-    &__price-text-small{
-        font-size: rem(30px);  
+    &__price-text-small {
+        font-size: rem(30px);
     }
 }
-.section__title--slide-burger{
+
+.section__title--slide-burger {
     color: #fff;
     line-height: rem(64px);
     margin-bottom: rem(20px);
 }
 
+.sostav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: rem(90px);
+    width: rem(272px);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .9);
+    &__table {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: $dark;
+        font-family: 'Ubuntu-Medium',Arial, Helvetica, sans-serif;
+        justify-content: space-between;
+        margin: 10px;
+    }
+    &__img {
+        width: rem(55px);
+        height: rem(50px);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    &__text {
+        flex: 1;
+        margin-left: 20px;
+    }
+    &--active{
+        display: block;
+    }
+}
