@@ -36,8 +36,8 @@
   'Content-type: text/html; charset=UTF-8'. "\r\n";
   $otvet = mail('luxeivan@gmail.com','Новый заказ',$body,$headers);
   if($otvet){
-      //$json = array ('ответ'=>"Заказ отправлен");
-      //echo json_encode($json);
       echo 'Письмо отправлено';
+  }else{
+      echo 'Ошибка отправки';
   } ;
 ?>

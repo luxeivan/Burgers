@@ -170,6 +170,102 @@ ul {
   line-height: 1.42;
   margin: 0; }
 
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(47, 50, 52, 0.93);
+  z-index: 700;
+  display: none;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  opacity: 0; }
+  .popup__area {
+    width: 16.875rem;
+    height: 9.375rem;
+    background: #fff;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative; }
+  .popup__close {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 24px;
+    height: 5px;
+    background: transparent;
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+    cursor: pointer; }
+    .popup__close::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 24px;
+      height: 5px;
+      border-radius: 3px;
+      background: #2f3234;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      color: #fff;
+      -webkit-transition: .3s ease;
+      -o-transition: .3s ease;
+      transition: .3s ease;
+      cursor: pointer; }
+    .popup__close::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 24px;
+      height: 5px;
+      border-radius: 3px;
+      background: #2f3234;
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      color: #fff;
+      -webkit-transition: .3s ease;
+      -o-transition: .3s ease;
+      transition: .3s ease;
+      cursor: pointer; }
+  .popup__text {
+    color: #000; }
+  .popup--active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1; }
+
 .hero {
   background-image: url("../img/hero/bg1.jpg");
   background-repeat: no-repeat;

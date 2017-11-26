@@ -152,29 +152,7 @@ $(function(){
   });
 });
 
-//Форма
-$(function(){
-  $('#form').on('submit',submitForm)
 
-  function submitForm(e){
-    e.preventDefault();
-    let form = $(e.target),
-    data = form.serialize(),
-    url = form.attr('action');
-    let request = $.ajax({
-      type:'POST',
-      url: url,
-      dataType:'HTML',
-      data: data
-    });
-    request.done(function(msg){
-      alert(msg);
-    })
-    request.fail(function(msg,text){
-      alert('Ошибка' + text);
-    })
-  }
-});
 
 // Состав
 $(function () {
@@ -189,8 +167,6 @@ $(function () {
     e.currentTarget.toggleClass('sostav--active');
   });
 });
-
-
 
 //Карта
 $(function () {
@@ -223,4 +199,33 @@ $(function () {
       placemark4 = new ymaps.Placemark([59.890391, 30.315633], description, options);
       myMap.geoObjects.add(placemark1).add(placemark2).add(placemark3).add(placemark4);
   }
+});
+//Форма
+$(function(){
+  $('#form').on('submit',submitForm)
+
+  function submitForm(e){
+    e.preventDefault();
+    let form = $(e.target),
+    data = form.serialize(),
+    url = form.attr('action');
+    let request = $.ajax({
+      type:'POST',
+      url: url,
+      dataType:'HTML',
+      data: data
+    });
+    request.done(function(msg){
+      $('.popup').toggleClass('popup--active').find('.popup__text').text('Ваш заказ отправлен');
+    })
+    request.fail(function(msg,text){
+      $('.popup').toggleClass('popup--active').find('.popup__text').text('Ошибка: ' + text);
+    })
+  }
+});
+//Popup
+$(function () {
+  $('.popup__area').on('click', function(){
+    $('.popup').toggleClass('popup--active');
+  });
 });
